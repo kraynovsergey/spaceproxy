@@ -1,0 +1,50 @@
+html {
+	font-size: 14px;
+}
+
+body {
+	background: radial-gradient(50% 170.41% at 50% 50%, #001754 0%, #052578 100%);
+	font-family: 'Futura PT';
+	color: $color_blue;
+	font-weight: 500;
+	font-style: normal;
+}
+
+body * {
+  outline: none !important;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+a,
+svg,
+path,
+rect,
+circle,
+button,
+span,
+::before,
+::after {
+	transition: $transition;
+}
+
+button {
+	border-radius: 0;
+	-webkit-appearance: none;
+	background: none;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	color: inherit;
+}
+
+input,
+textarea,
+label {
+	-webkit-appearance: none !important;
+	box-shadow: none !important;
+}

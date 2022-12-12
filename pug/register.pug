@@ -1,0 +1,36 @@
+doctype html
+html(lang="ru")
+    head
+        - var seo = {title: 'Регистрация', description: 'Описание страницы регистрации'}
+        include includes/_meta
+    body.body
+        .body__content
+            .container
+                .body__box
+                    .body__form
+                        a.body__logo(href="#" role="link")
+                            svg(width="215" height="42" viewBox="0 0 215 42" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                use(xlink:href="#svg-logo")
+
+                        form.form(action="#" method="post" role="form")
+                            .form__fieldset.form__message._success На email выслан пароль для входа. Если вы не получили письмо, проверьте папку Спам.
+
+                            fieldset.form__fieldset
+                                label.form__label(for="register-email") Email
+                                input.form__input(type="email" name="email" id="register-email")
+
+                            .form__fieldset.form__recaptcha
+                                picture
+                                    source(type="image/webp" srcset="img/tmp/recaptcha@2x.webp 2x, img/tmp/recaptcha.webp 1x")
+                                    source(type="image/jpeg" srcset="img/tmp/recaptcha@2x.jpg 2x, img/tmp/recaptcha.jpg 1x")
+                                    img(src="img/tmp/recaptcha.jpg" alt="" width="311" height="85")
+
+                            .form__fieldset.form__btn._small
+                                button(type="submit" role="button") Зарегистрироваться
+
+                            .form__info._center Есть аккаунт? <a href="auth.html" role="link">Войти</a>
+
+                    .body__img
+
+        include includes/_svg
+        include includes/_scripts

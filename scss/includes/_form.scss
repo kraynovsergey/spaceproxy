@@ -1,0 +1,118 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	max-width: 311px;
+	padding-top: 30px;
+	flex-grow: 1;
+	justify-content: center;
+
+	&__fieldset {
+		margin-bottom: 25px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__label {
+		text-transform: uppercase;
+		margin-bottom: 5px;
+	}
+
+	&__input {
+		height: 36px;
+		background: $color_grey;
+		border: 1px solid $color_darkGrey;
+		color: $color_blue;
+		padding: 0 15px;
+	}
+
+	&__info {
+		font-size: .85rem;
+
+		@media (max-width: 991px) {
+			font-size: 1rem;
+		}
+
+		&._right {
+			text-align: right;
+		}
+
+		&._center {
+			text-align: center;
+		}
+
+		& a {
+			text-decoration: underline;
+			color: inherit;
+
+			&:hover {
+				text-decoration: none;
+				color: inherit;
+			}
+		}
+	}
+
+	&__forgot {
+		margin-top: 10px;
+	}
+
+	&__recaptcha {
+		display: flex;
+		justify-content: center;
+
+		& img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+
+		& button {
+			height: 43px;
+			padding: 0 60px;
+			background: $color_blue;
+			color: $color_white;
+			text-transform: uppercase;
+			border-radius: 9px;
+			font-weight: 700;
+			width: auto;
+
+			&:hover {
+				background: $color_darkGrey;
+				color: $color_blue;
+			}
+		}
+
+		&._small {
+			& button {
+				padding: 0 30px;
+			}
+		}
+	}
+
+	&__message {
+		padding: 13px 30px;
+		color: $color_middleGrey;
+		border-radius: 9px;
+		line-height: 130%;
+		display: none;
+
+		&._active {
+			display: flex;
+		}
+
+		&._error {
+			background: $color_error;
+		}
+
+		&._success {
+			background: $color_success;
+		}
+
+		& span {
+			font-weight: bold;
+		}
+	}
+}
