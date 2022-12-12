@@ -24,6 +24,7 @@
 		border-radius: 15px;
 		min-height: 662px;
 		display: flex;
+		position: relative;
 
 		@media (max-width: 767px) {
 			padding: 20px;
@@ -36,6 +37,7 @@
 		background-size: cover;
 		flex-grow: 1;
 		border-radius: 17px;
+		position: relative;
 
 		@media (max-width: 767px) {
 			display: none;
@@ -50,6 +52,8 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
+		position: relative;
+		z-index: 2;
 
 		@media (max-width: 767px) {
 			min-width: 100%;
@@ -58,9 +62,67 @@
 	}
 
 	&__logo {
+		position: relative;
+
 		& svg {
 			max-width: 100%;
 			height: auto;
+		}
+	}
+
+	&__snowcaps {
+		position: absolute;
+		width: 101%;
+		top: -6.2%;
+		left: -1%;
+		z-index: 1;
+		display: none;
+		height: auto;
+
+		@media (max-width: 900px) {
+			top: -5%;
+		}
+
+		@media (max-width: 600px) {
+			top: -3.5%;
+		}
+
+		@media (max-width: 575px) {
+			top: -2.5%;
+		}
+
+		@media (max-width: 375px) {
+			top: -1.5%;
+		}
+	}
+
+	&__santahat {
+		position: absolute;
+		left: -21%;
+		top: -28%;
+		display: none;
+	}
+
+	&__tree {
+		position: absolute;
+		width: 90%;
+		height: auto;
+		bottom: 0;
+		left: 2%;
+		display: none;
+	}
+
+	&._ny {
+		padding-top: 60px;
+
+		@media (max-width: 767px) {
+			padding-top: 30px;
+		}
+
+		& .body__snowcaps,
+		& .body__santahat,
+		& .body__tree {
+			display: block;
 		}
 	}
 }
